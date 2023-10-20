@@ -16,9 +16,6 @@ footer {
     padding: 3rem;
   }
 
-  &__logo-box {
-  }
-
   &__links-box {
     @include gridy($disp: grid, $g-t-c: 2.5fr 1fr 1fr 2fr);
     column-gap: 8rem;
