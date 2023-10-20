@@ -18,3 +18,10 @@
   justify-content: $just;
   @content;
 }
+
+// MEDIA QUERIES
+@mixin small-device {
+  @media screen and (max-width: 87em) {
+    @content;
+  }
+}

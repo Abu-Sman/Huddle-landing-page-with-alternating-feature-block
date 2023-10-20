@@ -9,11 +9,24 @@ header {
     );
   background-size: cover;
   margin-bottom: $section-space;
+
+  @include small-device {
+    background-image: url(../images/bg-hero-mobile.svg),
+      linear-gradient(
+        rgba($color-secondary-light, 0.8),
+        rgba($color-secondary-light, 0.8)
+      );
+    background-size: 100%;
+  }
 }
 
 .header {
   @include gridy($disp: grid, $g-t-c: 1fr);
   row-gap: $gutter-horizontal;
+
+  @include small-device {
+    row-gap: 4rem;
+  }
 
   &__navigation-box {
     @include flexy($disp: flex, $just: space-between, $align: center);
@@ -21,12 +34,23 @@ header {
 
   &__btn-box {
     flex-basis: 15%;
+
+    @include small-device {
+      flex-basis: auto;
+    }
   }
 
   &__textimg-box {
     @include gridy($disp: grid, $g-t-c: 1fr 1.3fr);
     align-items: center;
     column-gap: $gutter-vertical;
+
+    @include small-device {
+      @include gridy($g-t-c: 1fr);
+      row-gap: 5rem;
+      padding: 3rem;
+      text-align: center;
+    }
   }
 
   .text {

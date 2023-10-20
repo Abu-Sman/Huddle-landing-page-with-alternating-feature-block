@@ -11,4 +11,9 @@
   left: 50%;
   transform: translate(-50%, -60%);
   z-index: 100;
+
+  @include small-device {
+    max-width: 90%;
+    padding: 4rem 0;
+  }
 }

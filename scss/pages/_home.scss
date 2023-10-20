@@ -6,6 +6,11 @@
   @include gridy($disp: grid, $g-t-c: 1fr);
   row-gap: 4rem;
   margin-bottom: $section-space * 2;
+
+  @include small-device {
+    padding: 0 3rem;
+    margin-bottom: 25rem;
+  }
 }
 
 .box {
@@ -17,7 +22,18 @@
     -1px -1px 10px rgba($color-black, 0.05);
   padding: 6rem 2rem 6rem 12rem;
 
+  @include small-device {
+    @include flexy();
+    flex-direction: column-reverse;
+    padding: 5rem;
+    text-align: center;
+    gap: 6rem;
+  }
+
   &__text-box {
+    @include small-device {
+      font-size: 1.7rem;
+    }
   }
 
   &__img-box {
@@ -26,4 +42,8 @@
 
 .box-2 {
   flex-direction: row-reverse;
+
+  @include small-device {
+    flex-direction: column-reverse;
+  }
 }

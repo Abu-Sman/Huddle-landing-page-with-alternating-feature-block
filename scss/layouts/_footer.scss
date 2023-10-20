@@ -12,12 +12,20 @@ footer {
   @include gridy($disp: grid, $g-t-c: 1fr);
   row-gap: 4rem;
 
+  @include small-device {
+    padding: 3rem;
+  }
+
   &__logo-box {
   }
 
   &__links-box {
     @include gridy($disp: grid, $g-t-c: 2.5fr 1fr 1fr 2fr);
     column-gap: 8rem;
+
+    @include small-device {
+      @include gridy($g-t-c: 1fr);
+    }
 
     & > ul {
       list-style: none;
@@ -31,6 +39,16 @@ footer {
   &__copyright-box {
     justify-self: end;
     font-size: 1.4rem;
+
+    @include small-device {
+      justify-self: center;
+    }
+  }
+
+  &-navlinks-1 {
+    @include small-device {
+      margin-bottom: 2rem;
+    }
   }
 }
 
@@ -39,6 +57,10 @@ footer {
   font-size: 1.6rem;
   line-height: 1.6;
   padding-left: 1rem;
+
+  @include small-device {
+    margin-bottom: 5rem;
+  }
 
   .contact {
     @include flexy($disp: flex, $align: flex-start);

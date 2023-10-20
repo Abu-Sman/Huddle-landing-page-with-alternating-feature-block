@@ -3,6 +3,10 @@
 /***************************************/
 .logo-img {
   height: 3rem;
+
+  @include small-device {
+    height: 2.5rem;
+  }
 }
 
 .header-img {

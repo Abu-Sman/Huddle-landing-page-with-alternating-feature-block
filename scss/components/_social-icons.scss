@@ -6,6 +6,11 @@
   @include flexy($disp: flex);
   gap: 1.5rem;
 
+  @include small-device {
+    margin-top: 4rem;
+    justify-self: center;
+  }
+
   &__icon:link,
   &__icon:visited {
     display: inline-block;
