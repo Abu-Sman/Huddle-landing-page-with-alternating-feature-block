@@ -1,0 +1,13 @@
+/***************************************/
+/*  CONTAINER STYLES                   */
+/***************************************/
+.container {
+  &--big {
+    @include center(130rem);
+    padding: 6rem 2rem;
+  }
+
+  &--medium {
+    @include center(120rem);
+  }
+}

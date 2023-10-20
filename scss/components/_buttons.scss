@@ -1,0 +1,47 @@
+/***************************************/
+/*  BUTTONS STYLES                     */
+/***************************************/
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    border-radius: 100px;
+    font-weight: 700;
+    box-shadow: 0.2rem 0.2rem 1rem rgba($color-black, 0.1);
+    transition: all 0.2s ease-in;
+  }
+
+  &:hover,
+  &:active {
+    background-color: lighten($color-primary, 10%);
+    transform: translateY(-2px);
+  }
+
+  &__free {
+    padding: 1.4rem 4rem;
+    background-color: $color-white;
+    color: $color-secondary-dark;
+    width: 100%;
+
+    &:hover,
+    &:active {
+      background-color: lighten($color-white, 10%);
+    }
+  }
+
+  &__cta {
+    padding: 1.8rem 4rem;
+    background-color: $color-primary;
+    color: $color-secondary-light;
+    width: 50%;
+
+    &--big {
+      padding: 2.5rem 4rem;
+      width: 60%;
+    }
+  }
+}

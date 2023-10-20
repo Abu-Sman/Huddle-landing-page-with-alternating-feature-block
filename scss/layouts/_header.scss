@@ -1,0 +1,35 @@
+/***************************************/
+/*  HEADER STYLES                      */
+/***************************************/
+header {
+  background-image: url(../images/bg-hero-desktop.svg),
+    linear-gradient(
+      rgba($color-secondary-light, 0.8),
+      rgba($color-secondary-light, 0.8)
+    );
+  background-size: cover;
+  margin-bottom: $section-space;
+}
+
+.header {
+  @include gridy($disp: grid, $g-t-c: 1fr);
+  row-gap: $gutter-horizontal;
+
+  &__navigation-box {
+    @include flexy($disp: flex, $just: space-between, $align: center);
+  }
+
+  &__btn-box {
+    flex-basis: 15%;
+  }
+
+  &__textimg-box {
+    @include gridy($disp: grid, $g-t-c: 1fr 1.3fr);
+    align-items: center;
+    column-gap: $gutter-vertical;
+  }
+
+  .text {
+    color: $color-secondary-dark;
+  }
+}

@@ -1,0 +1,29 @@
+/***************************************/
+/*  SECTION BENEFIT STYLES             */
+/***************************************/
+
+.section-benefits {
+  @include gridy($disp: grid, $g-t-c: 1fr);
+  row-gap: 4rem;
+  margin-bottom: $section-space * 2;
+}
+
+.box {
+  @include flexy($disp: flex, $align: center);
+  gap: 15rem;
+  background-color: $color-white;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px rgba($color-black, 0.05),
+    -1px -1px 10px rgba($color-black, 0.05);
+  padding: 6rem 2rem 6rem 12rem;
+
+  &__text-box {
+  }
+
+  &__img-box {
+  }
+}
+
+.box-2 {
+  flex-direction: row-reverse;
+}

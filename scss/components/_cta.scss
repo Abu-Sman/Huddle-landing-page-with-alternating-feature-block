@@ -1,0 +1,14 @@
+.cta-box {
+  background-color: $color-white;
+  width: 70rem;
+  text-align: center;
+  box-shadow: 1px 1px 10px rgba($color-black, 0.05),
+    -1px -1px 10px rgba($color-black, 0.05);
+  padding: 5rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  z-index: 100;
+}

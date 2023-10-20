@@ -1,0 +1,289 @@
+/***************************************/
+/*  BASE STYLES                        */
+/***************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+/***************************************/
+/*  TYPOGRAPHY STYLES                  */
+/***************************************/
+.tertiary-heading, .secondary-heading, .primary-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: hsl(192, 100%, 9%);
+}
+
+.primary-heading {
+  font-size: 4.2rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 3rem;
+}
+
+.secondary-heading {
+  font-size: 3rem;
+  letter-spacing: -1px;
+  margin-bottom: 3rem;
+}
+
+.tertiary-heading {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.text {
+  color: hsl(208, 11%, 55%);
+  line-height: 1.7;
+}
+.text:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+/***************************************/
+/*  IMAGES STYLES                      */
+/***************************************/
+.logo-img {
+  height: 3rem;
+}
+
+.header-img {
+  width: 100%;
+}
+
+.img-benefit {
+  width: 100%;
+}
+
+[class^=icon] {
+  height: 2rem;
+}
+
+.logo-footer {
+  height: 5rem;
+}
+
+/***************************************/
+/*  BUTTONS STYLES                     */
+/***************************************/
+.btn:link, .btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  border-radius: 100px;
+  font-weight: 700;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in;
+}
+.btn:hover, .btn:active {
+  background-color: #ff85d2;
+  transform: translateY(-2px);
+}
+.btn__free {
+  padding: 1.4rem 4rem;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(192, 100%, 9%);
+  width: 100%;
+}
+.btn__free:hover, .btn__free:active {
+  background-color: white;
+}
+.btn__cta {
+  padding: 1.8rem 4rem;
+  background-color: hsl(322, 100%, 66%);
+  color: hsl(193, 100%, 96%);
+  width: 50%;
+}
+.btn__cta--big {
+  padding: 2.5rem 4rem;
+  width: 60%;
+}
+
+.cta-box {
+  background-color: hsl(0, 0%, 100%);
+  width: 70rem;
+  text-align: center;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05), -1px -1px 10px rgba(0, 0, 0, 0.05);
+  padding: 5rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  z-index: 100;
+}
+
+/***************************************/
+/*  SOCIAL ICONS STYLES                */
+/***************************************/
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.social-links__icon:link, .social-links__icon:visited {
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  transition: border-color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-links__icon:link svg[class^=icon], .social-links__icon:visited svg[class^=icon] {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: hsl(0, 0%, 100%);
+  transition: fill 0.3s ease-in-out;
+}
+.social-links__icon:hover, .social-links__icon:active {
+  border-color: hsl(322, 100%, 66%);
+}
+.social-links__icon:hover svg[class^=icon] {
+  fill: hsl(322, 100%, 66%);
+}
+
+/***************************************/
+/*  CONTAINER STYLES                   */
+/***************************************/
+.container--big {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+.container--medium {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/***************************************/
+/*  HEADER STYLES                      */
+/***************************************/
+header {
+  background-image: url(../images/bg-hero-desktop.svg), linear-gradient(rgba(235, 251, 255, 0.8), rgba(235, 251, 255, 0.8));
+  background-size: cover;
+  margin-bottom: 15rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 8rem;
+}
+.header__navigation-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__btn-box {
+  flex-basis: 15%;
+}
+.header__textimg-box {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  align-items: center;
+  column-gap: 6rem;
+}
+.header .text {
+  color: hsl(192, 100%, 9%);
+}
+
+/***************************************/
+/*  FOOTER STYLES                      */
+/***************************************/
+footer {
+  background-color: hsl(192, 100%, 9%);
+  color: hsl(193, 100%, 96%);
+  padding: 18rem 0 5rem;
+  position: relative;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 4rem;
+}
+.footer__links-box {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr 2fr;
+  column-gap: 8rem;
+}
+.footer__links-box > ul {
+  list-style: none;
+}
+.footer__links-box li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.footer__copyright-box {
+  justify-self: end;
+  font-size: 1.4rem;
+}
+
+.contact-infos {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  padding-left: 1rem;
+}
+.contact-infos .contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.contact-infos .contact:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.contact-infos .footer-link:link, .contact-infos .footer-link:visited {
+  font-size: inherit;
+}
+
+.footer-link:link, .footer-link:visited {
+  display: inline-block;
+  font-size: 1.7rem;
+  color: hsl(193, 100%, 96%);
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease-in;
+}
+.footer-link:hover, .footer-link:active {
+  border-bottom-color: inherit;
+}
+
+/***************************************/
+/*  SECTION BENEFIT STYLES             */
+/***************************************/
+.section-benefits {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 4rem;
+  margin-bottom: 30rem;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05), -1px -1px 10px rgba(0, 0, 0, 0.05);
+  padding: 6rem 2rem 6rem 12rem;
+}
+.box-2 {
+  flex-direction: row-reverse;
+}
+
+/*# sourceMappingURL=style.css.map */

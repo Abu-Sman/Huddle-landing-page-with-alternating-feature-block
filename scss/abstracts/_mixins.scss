@@ -1,0 +1,20 @@
+// CENTER ITEMS
+@mixin center($max-w: null) {
+  max-width: $max-w;
+  margin: 0 auto;
+}
+
+// GRID CONTAINER
+@mixin gridy($disp: null, $g-t-c: null) {
+  display: $disp;
+  grid-template-columns: $g-t-c;
+  @content;
+}
+
+// FLEX CONTAINER
+@mixin flexy($disp: null, $align: null, $just: null) {
+  display: $disp;
+  align-items: $align;
+  justify-content: $just;
+  @content;
+}

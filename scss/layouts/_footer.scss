@@ -1,0 +1,77 @@
+/***************************************/
+/*  FOOTER STYLES                      */
+/***************************************/
+footer {
+  background-color: $color-secondary-dark;
+  color: $color-secondary-light;
+  padding: 18rem 0 5rem;
+  position: relative;
+}
+
+.footer {
+  @include gridy($disp: grid, $g-t-c: 1fr);
+  row-gap: 4rem;
+
+  &__logo-box {
+  }
+
+  &__links-box {
+    @include gridy($disp: grid, $g-t-c: 2.5fr 1fr 1fr 2fr);
+    column-gap: 8rem;
+
+    & > ul {
+      list-style: none;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__copyright-box {
+    justify-self: end;
+    font-size: 1.4rem;
+  }
+}
+
+// CONTACT INFORMATION STYLES
+.contact-infos {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  padding-left: 1rem;
+
+  .contact {
+    @include flexy($disp: flex, $align: flex-start);
+    gap: 2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .footer-link {
+    &:link,
+    &:visited {
+      font-size: inherit;
+    }
+  }
+}
+
+// LINK STYLES
+.footer-link {
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-size: 1.7rem;
+    color: $color-secondary-light;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease-in;
+  }
+
+  &:hover,
+  &:active {
+    border-bottom-color: inherit;
+  }
+}

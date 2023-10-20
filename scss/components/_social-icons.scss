@@ -1,0 +1,36 @@
+/***************************************/
+/*  SOCIAL ICONS STYLES                */
+/***************************************/
+
+.social-links {
+  @include flexy($disp: flex);
+  gap: 1.5rem;
+
+  &__icon:link,
+  &__icon:visited {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    transition: border-color 0.2s ease-in-out;
+
+    @include flexy(flex, center, center);
+
+    svg[class^="icon"] {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: $color-white;
+      transition: fill 0.3s ease-in-out;
+    }
+  }
+
+  &__icon:hover,
+  &__icon:active {
+    border-color: $color-primary;
+  }
+
+  &__icon:hover svg[class^="icon"] {
+    fill: $color-primary;
+  }
+}
